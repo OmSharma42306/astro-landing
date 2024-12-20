@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TechStack from '../components/TechStack.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ToolGrid from '../components/ToolGrid.astro';
+import { projects } from '../data/projects';
+---
+
+<Layout title="Om Sharma - Full Stack Developer">
+  <main class="container mx-auto px-4 py-16 max-w-4xl">
+    <!-- Header section remains the same -->
+    <header class="text-center mb-24">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        <span class="text-accent">&lt;</span>
+        Om Sharma
+        <span class="text-accent">/&gt;</span>
+      </h1>
+      <p class="text-xl text-gray-400">Full Stack Developer</p>
+    </header>
+
+    <!-- About section remains the same -->
+    <section class="mb-24">
+      <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+        <pre class="text-sm md:text-base"><code>/**
+ * About Me
+ * @dev Full Stack Developer
+ */</code></pre>
+        <p class="mt-4 leading-relaxed">
+          I'm a Full Stack Developer passionate about building robust, scalable, and efficient web applications. 
+          I specialize in the MERN stack while leveraging additional expertise in PostgreSQL, Prisma ORM, and Docker. 
+          With skills in Python, WebRTC, and socket programming, I thrive on creating seamless real-time communication experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tools section -->
+    <section class="mb-24">
+      <h2 class="text-2xl font-bold mb-8">
+        <span class="text-accent">const</span> tools = {
+      </h2>
+      <ToolGrid />
+      <div class="mt-4 text-right">}</div>
+    </section>
+
+    <!-- Tech stack section -->
+    <section class="mb-24">
+      <h2 class="text-2xl font-bold mb-8">
+        <span class="text-accent">const</span> techStack = {
+      </h2>
+      <TechStack />
+      <div class="mt-4 text-right">}</div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="mb-24">
+      <h2 class="text-2xl font-bold mb-8">
+        <span class="text-accent">class</span> Projects {
+      </h2>
+      <div class="space-y-8">
+        {projects.map(project => (
+          <ProjectCard {...project} />
+        ))}
+      </div>
+      <div class="mt-4">}</div>
+    </section>
+
+    <!-- Expertise section remains the same -->
+    <section class="mb-24">
+      <h2 class="text-2xl font-bold mb-8">
+        <span class="text-accent">class</span> Expertise {
+      </h2>
+      <div class="space-y-6 pl-4">
+        <div class="bg-gray-900 p-6 rounded-lg">
+          <h3 class="font-bold mb-3">Backend Development</h3>
+          <p>Proficient in building scalable server-side applications using Node.js, Express.js, and various databases.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg">
+          <h3 class="font-bold mb-3">Frontend Development</h3>
+          <p>Experience in creating responsive and interactive UIs using React and modern JavaScript/TypeScript.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg">
+          <h3 class="font-bold mb-3">DevOps & Cloud</h3>
+          <p>Skilled in Docker, Kubernetes, and AWS for deployment and infrastructure management.</p>
+        </div>
+      </div>
+      <div class="mt-4">}</div>
+    </section>
+
+    <!-- Footer remains the same -->
+    <footer class="text-center text-gray-400">
+      <p>
+        <span class="text-accent">const</span> contact = {
+        <a href="mailto:your.email@example.com" class="text-accent hover:underline">email</a>,
+        <a href="https://github.com/yourusername" target="_blank" class="text-accent hover:underline">github</a>,
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-accent hover:underline">linkedin</a>
+        }
+      </p>
+    </footer>
+  </main>
+</Layout>

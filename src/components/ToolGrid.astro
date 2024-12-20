@@ -1,0 +1,10 @@
+---
+import ToolIcon from './ToolIcon.astro';
+import { tools } from '../data/tools';
+---
+
+<div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 justify-items-center py-6">
+  {tools.map(tool => (
+    <ToolIcon {...tool} />
+  ))}
+</div>

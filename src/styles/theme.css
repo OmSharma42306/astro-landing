@@ -1,0 +1,17 @@
+:root {
+  --bg-primary: #1E1E1E;
+  --text-primary: #D4D4D4;
+  --accent: #61DAFB;
+  --card-bg: #2D2D2D;
+}
+
+:root.light {
+  --bg-primary: #FFFFFF;
+  --text-primary: #1E1E1E;
+  --accent: #0066CC;
+  --card-bg: #F5F5F5;
+}
+
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

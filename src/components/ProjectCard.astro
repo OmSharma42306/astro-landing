@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  techStack: string[];
+  liveLink?: string;
+  repoLink?: string;
+}
+
+const { title, description, techStack, liveLink, repoLink } = Astro.props;
+---
+
+<div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:transform hover:scale-[1.02] transition-all">
+  <h3 class="text-xl font-bold mb-3 text-accent">{title}</h3>
+  <p class="text-gray-300 mb-4">{description}</p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    {techStack.map(tech => (
+      <span class="bg-gray-800 px-2 py-1 rounded-md text-sm">{tech}</span>
+    ))}
+  </div>
+  <div class="flex gap-4">
+    {liveLink && (
+      <a href={liveLink} target="_blank" class="text-accent hover:underline">Live Demo</a>
+    )}
+    {repoLink && (
+      <a href={repoLink} target="_blank" class="text-accent hover:underline">Repository</a>
+    )}
+  </div>
+</div>
